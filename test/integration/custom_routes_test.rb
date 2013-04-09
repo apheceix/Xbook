@@ -12,9 +12,14 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
   	assert_redirected_to '/'
   end
 
-    test "that the /register route open the sign up page" do
+  test "that the /register route open the sign up page" do
   	get 'register'
   	assert_response :success
+  end
+
+  test "that a custom profile page route is reachable" do
+    get '/fafa'
+    assert_response :success
   end
 
 end

@@ -13,6 +13,8 @@ Xbook::Application.routes.draw do
   get 'feed', to: 'statuses#index', as: :feed
   root to: 'statuses#index'
 
+  get '/:id', to: 'profiles#show'
+
 
 
 
